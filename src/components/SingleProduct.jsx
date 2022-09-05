@@ -31,13 +31,20 @@ const SingleProduct = ({ title, fetchURL, rowID }) => {
             />
             <p className=" text-center">{productItem.title}</p>
             <div className="text-center p-2 m-2">
-              <button onClick={setModal(true)} className="align-center">
-                View Item
-              </button>
+              <button className="align-center">View Item</button>
             </div>
-            <div className="">
-              <div className="fixed l-[50%] r-[50%]"></div>
-            </div>
+            {/* <div className={setModal(true) ? `visible` : `invisible`}>
+              <div className="fixed h-[500px] w-[500px] l-[50%] r-[50%] flex flex-col">
+                <p>{productItem.title}</p>
+                <img
+                  className="p-4 m-4"
+                  src={productItem.image}
+                  alt={productItem.title}
+                />
+                <p>{productItem.price}</p>
+                <p>{productItem.description}</p>
+              </div> */}
+            {/* </div> */}
           </div>
         ))}
       </div>

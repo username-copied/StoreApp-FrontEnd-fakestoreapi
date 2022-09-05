@@ -21,7 +21,7 @@ const SingleProduct = ({ title, fetchURL, rowID }) => {
   return (
     <>
       <h1 className="bg-black text-white text-center p-4 m-4">Shooping App</h1>
-      <div className="grid grid-cols-4 gap-[100px] p-4 m-4 items-center justify-center">
+      <div className="grid  md:grid-cols-4 gap-[100px] p-4 m-4 items-center justify-center">
         {product.map((productItem) => (
           <div className="rounded-md" key={productItem.id}>
             <img
@@ -33,18 +33,6 @@ const SingleProduct = ({ title, fetchURL, rowID }) => {
             <div className="text-center p-2 m-2">
               <button className="align-center">View Item</button>
             </div>
-            {/* <div className={setModal(true) ? `visible` : `invisible`}>
-              <div className="fixed h-[500px] w-[500px] l-[50%] r-[50%] flex flex-col">
-                <p>{productItem.title}</p>
-                <img
-                  className="p-4 m-4"
-                  src={productItem.image}
-                  alt={productItem.title}
-                />
-                <p>{productItem.price}</p>
-                <p>{productItem.description}</p>
-              </div> */}
-            {/* </div> */}
           </div>
         ))}
       </div>

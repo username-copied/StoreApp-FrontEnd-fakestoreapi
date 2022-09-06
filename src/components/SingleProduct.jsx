@@ -27,7 +27,7 @@ const SingleProduct = () => {
       </h1>
       <div className=" md:flex p-4 m-4">
         <img
-          className="mx-auto p-4 m-4 h-[500px] w-[40%] duration-[300ms] hover:scale-110 "
+          className="mx-auto p-4 m-4 h-[500px] w-full md:w-[40%] duration-[300ms] hover:scale-110 "
           src={product.image}
           alt="xd"
         />

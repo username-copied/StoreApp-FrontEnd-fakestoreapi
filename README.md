@@ -1,6 +1,6 @@
 # This project is build with `ReactJS` and `TailwindCSS`
 
-## Icons are from `iconshunt.io`
+## Icons are from `https://iconscout.com`
 
 ### To run the project in your local system use following scripts:
 

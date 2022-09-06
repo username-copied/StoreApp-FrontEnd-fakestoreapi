@@ -35,11 +35,15 @@ const SingleProduct = () => {
           <p className="p-8 md:p-4 m-4 text-xl md:text-2xl md:text-start text-center">
             {product.title}
           </p>
-          <p className="p-4 m-4 text-xl md:text-2xl">${product.price}</p>
-          <p className="p-4 m-4 text-xl md:text-2xl uppercase">
+          <p className="p-4 m-4 text-xl md:text-2xl  md:text-start text-center">
+            ${product.price}
+          </p>
+          <p className="p-4 m-4 text-xl md:text-2xl uppercase  md:text-start text-center">
             {product.category}
           </p>
-          <p className="p-4 m-4 text-xl md:text-2xl">{product.description}</p>
+          <p className="p-4 m-4 text-xl md:text-2xl  md:text-start text-center">
+            {product.description}
+          </p>
         </div>
       </div>
     </>

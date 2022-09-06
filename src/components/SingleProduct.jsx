@@ -1,17 +1,19 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const SingleProduct = ({ title, fetchURL, rowID }) => {
+const SingleProduct = () => {
   const [product, setProduct] = useState([]);
-  const [modal, setModal] = useState(false);
-  const url = `https://fakestoreapi.com/products`;
+  const params = useParams();
+  const url = `https://fakestoreapi.com/products/${params.productId}`;
+
+  console.log(product);
   useEffect(() => {
     axios
       .get(url)
       .then((response) => {
         setProduct(response.data);
-        // console.log(response);
       })
       .catch((error) => {
         console.log(error);
@@ -20,21 +22,25 @@ const SingleProduct = ({ title, fetchURL, rowID }) => {
 
   return (
     <>
-      <h1 className="bg-black text-white text-center p-4 m-4">Shooping App</h1>
-      <div className="grid  md:grid-cols-4 gap-[100px] p-4 m-4 items-center justify-center">
-        {product.map((productItem) => (
-          <div className="rounded-md" key={productItem.id}>
-            <img
-              className="p-4 m-4  h-[300px]"
-              src={productItem.image}
-              alt={productItem.title}
-            />
-            <p className=" text-center">{productItem.title}</p>
-            <div className="text-center p-2 m-2">
-              <button className="align-center">View Item</button>
-            </div>
-          </div>
-        ))}
+      <h1 className="bg-black text-white text-center text-2xl font-bold font-sans p-4 m-4">
+        Shop Mart
+      </h1>
+      <div className=" md:flex p-4 m-4">
+        <img
+          className="mx-auto p-4 m-4 h-[500px] w-[40%] duration-[300ms] hover:scale-110 "
+          src={product.image}
+          alt="xd"
+        />
+        <div>
+          <p className="p-8 md:p-4 m-4 text-xl md:text-2xl md:text-start text-center">
+            {product.title}
+          </p>
+          <p className="p-4 m-4 text-xl md:text-2xl">${product.price}</p>
+          <p className="p-4 m-4 text-xl md:text-2xl uppercase">
+            {product.category}
+          </p>
+          <p className="p-4 m-4 text-xl md:text-2xl">{product.description}</p>
+        </div>
       </div>
     </>
   );

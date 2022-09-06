@@ -17,7 +17,7 @@ const Products = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  });
   return (
     <>
       <h1 className="bg-black text-white text-center text-2xl font-bold font-sans p-4 m-4">

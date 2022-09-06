@@ -18,7 +18,7 @@ const SingleProduct = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  });
 
   return (
     <>

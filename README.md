@@ -11,3 +11,5 @@
 ### `npm start`
 
 #### PS this is just frontend and products are fetched from `fakestore api`
+
+#### Live website <a>https://fakeshopapp.netlify.app/</a>
